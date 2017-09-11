@@ -88,7 +88,7 @@ class ShopController extends FOSRestController
      * @Method ({"GET"})
      * @ApiDoc(
      *     description="Lists all reviews of a shop, depending on id and password.
-     *                  Filtered by pagesize; possibile to filter by creation- or updating date.
+     *                  Filtered by pagesize; possibile to filter by creation- or updating date.",
      *
      *    parameters={
      *     {"name"="id", "dataType"="integer", "required"="true", "description"="pagenumber"},
