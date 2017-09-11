@@ -20,8 +20,8 @@
       <file leaf-file-name="ShopController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="90" column="98" lean-forward="false" selection-start-line="90" selection-start-column="98" selection-end-line="90" selection-end-column="98" />
+            <state relative-caret-position="217">
+              <caret line="101" column="118" lean-forward="false" selection-start-line="101" selection-start-column="118" selection-end-line="101" selection-end-column="118" />
               <folding />
             </state>
           </provider>
@@ -285,7 +285,7 @@
       <workItem from="1504994718902" duration="966000" />
       <workItem from="1505107583822" duration="7366000" />
       <workItem from="1505122377351" duration="637000" />
-      <workItem from="1505123937380" duration="285000" />
+      <workItem from="1505123937380" duration="705000" />
     </task>
     <task id="LOCAL-00001" summary="better name for ShopController">
       <created>1505113038164</created>
@@ -308,11 +308,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505124157648</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Bugfix: Documentation in English">
+      <created>1505124235872</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1505124235872</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45162000" />
+    <option name="totallyTimeSpent" value="45582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -347,7 +354,8 @@
     <MESSAGE value="better name for ShopController" />
     <MESSAGE value="Debug:&#10;Id wird automatisch erzeugt" />
     <MESSAGE value="Update: Documentation in English" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: Documentation in English" />
+    <MESSAGE value="Bugfix: Documentation in English" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bugfix: Documentation in English" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -707,8 +715,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="90" column="98" lean-forward="false" selection-start-line="90" selection-start-column="98" selection-end-line="90" selection-end-column="98" />
+        <state relative-caret-position="217">
+          <caret line="101" column="118" lean-forward="false" selection-start-line="101" selection-start-column="118" selection-end-line="101" selection-end-column="118" />
           <folding />
         </state>
       </provider>

@@ -97,7 +97,9 @@ class ShopController extends FOSRestController
      *
      *    filters={
      *     {"name"="page", "dataType"="integer", "required"="true", "default"="1", "description"="pagenumber"},
-     *     {"name"="limit", "dataType"="integer", "required"="true", "default"="3", "description"="items per page"}
+     *     {"name"="limit", "dataType"="integer", "required"="true", "default"="3", "description"="items per page"},
+     *     {"name"="creation", "dataType"="datetime", "required"="false", "description"="date of creation (not implemented yet)"},
+     *     {"name"="update", "dataType"="datetime", "required"="false", "description"="date of update (not implemented yet)"}
      *     }
      *
      * )
@@ -107,8 +109,10 @@ class ShopController extends FOSRestController
      */
     public function getReview(Request $request)
     {
+
         $id=$request->query->get('id');
         $password=$request->query->get('password');
+
         $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByShop($id, $password);
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
