@@ -98,8 +98,8 @@ class ShopController extends FOSRestController
      *    filters={
      *     {"name"="page", "dataType"="integer", "required"="true", "default"="1", "description"="pagenumber"},
      *     {"name"="limit", "dataType"="integer", "required"="true", "default"="3", "description"="items per page"},
-     *     {"name"="creation", "dataType"="datetime", "required"="false", "description"="date of creation (not implemented yet)"},
-     *     {"name"="update", "dataType"="datetime", "required"="false", "description"="date of update (not implemented yet)"}
+     *     {"name"="creation (not implemented yet)", "dataType"="datetime", "required"="false", "description"="date of creation"},
+     *     {"name"="update (not implemented yet)", "dataType"="datetime", "required"="false", "description"="date of update "}
      *     }
      *
      * )
