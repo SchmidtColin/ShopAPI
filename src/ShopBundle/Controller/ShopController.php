@@ -19,7 +19,7 @@ use ShopBundle\Entity\Shops;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class ShopControllerFinal extends FOSRestController
+class ShopController extends FOSRestController
 {
 
     /**
