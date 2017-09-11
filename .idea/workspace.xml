@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a0f0f75-4329-48f7-a016-f35616783843" name="Default" comment="Update: Limitation of reviews (depending on pagesize)">
+    <list default="true" id="6a0f0f75-4329-48f7-a016-f35616783843" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php" afterPath="$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php" afterPath="$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,13 +32,13 @@
       <file leaf-file-name="shop_reviewsRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="236">
+              <caret line="14" column="72" lean-forward="true" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
               <folding>
-                <marker date="1505127467939" expanded="true" signature="401:479" ph="SElECT s.id ShopBundle" />
-                <marker date="1505127467939" expanded="true" signature="401:481" ph="SElECT s.int... ShopBundle" />
-                <marker date="1505127467939" expanded="true" signature="656:716" ph="SELECT r.cre... ShopBundle" />
-                <marker date="1505127467939" expanded="true" signature="656:724" ph="SELECT r.rev... ShopBundle" />
+                <marker date="1505127552400" expanded="true" signature="401:479" ph="SElECT s.id ShopBundle" />
+                <marker date="1505127552400" expanded="true" signature="401:481" ph="SElECT s.int... ShopBundle" />
+                <marker date="1505127552400" expanded="true" signature="656:716" ph="SELECT r.cre... ShopBundle" />
+                <marker date="1505127552400" expanded="true" signature="656:724" ph="SELECT r.rev... ShopBundle" />
               </folding>
             </state>
           </provider>
@@ -313,7 +312,7 @@
       <workItem from="1504994718902" duration="966000" />
       <workItem from="1505107583822" duration="7366000" />
       <workItem from="1505122377351" duration="637000" />
-      <workItem from="1505123937380" duration="3549000" />
+      <workItem from="1505123937380" duration="3601000" />
     </task>
     <task id="LOCAL-00001" summary="better name for ShopController">
       <created>1505113038164</created>
@@ -357,11 +356,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505124747279</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update: Limitation of reviews (depending on pagesize)">
+      <created>1505127509088</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1505127509088</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48426000" />
+    <option name="totallyTimeSpent" value="48478000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -447,10 +453,10 @@
         <state relative-caret-position="272">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding>
-            <marker date="1505127467939" expanded="true" signature="401:479" ph="SElECT s.id ShopBundle" />
-            <marker date="1505127467939" expanded="true" signature="401:481" ph="SElECT s.int... ShopBundle" />
-            <marker date="1505127467939" expanded="true" signature="656:716" ph="SELECT r.cre... ShopBundle" />
-            <marker date="1505127467939" expanded="true" signature="656:724" ph="SELECT r.rev... ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="401:479" ph="SElECT s.id ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="401:481" ph="SElECT s.int... ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="656:716" ph="SELECT r.cre... ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="656:724" ph="SELECT r.rev... ShopBundle" />
           </folding>
         </state>
       </provider>
@@ -761,13 +767,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="236">
+          <caret line="14" column="72" lean-forward="true" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
           <folding>
-            <marker date="1505127467939" expanded="true" signature="401:479" ph="SElECT s.id ShopBundle" />
-            <marker date="1505127467939" expanded="true" signature="401:481" ph="SElECT s.int... ShopBundle" />
-            <marker date="1505127467939" expanded="true" signature="656:716" ph="SELECT r.cre... ShopBundle" />
-            <marker date="1505127467939" expanded="true" signature="656:724" ph="SELECT r.rev... ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="401:479" ph="SElECT s.id ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="401:481" ph="SElECT s.int... ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="656:716" ph="SELECT r.cre... ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="656:724" ph="SELECT r.rev... ShopBundle" />
           </folding>
         </state>
       </provider>
