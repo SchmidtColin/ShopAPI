@@ -112,8 +112,9 @@ class ShopController extends FOSRestController
 
         $id=$request->query->get('id');
         $password=$request->query->get('password');
+        $limit=$request->query->getInt('limit', 3);
 
-        $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByShop($id, $password);
+        $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByShop($id, $password, $limit);
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $query, $request->query->getInt('page',1),

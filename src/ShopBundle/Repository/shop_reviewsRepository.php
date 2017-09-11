@@ -12,13 +12,17 @@ use Doctrine\ORM\EntityRepository;
  */
 class shop_reviewsRepository extends EntityRepository
 {
-    public function getByShop(int $shopId, string $password)
+    public function getByShop(int $shopId, string $password, int $limit)
     {
-        $now = new \DateTime();
+        $pw = $this->getEntityManager()->createQuery('SElECT s.id from ShopBundle:Shops s WHERE s.id=:id AND s.interfacePassword=:pw')
+            ->setParameter('id', $shopId)
+        ->setParameter('pw', $password)
+        ->getResult();
+
         return $this->getEntityManager()->createQuery(
-            'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.hash=:password'
-        )->setParameter('shopId',$shopId)
-            ->setParameter('password',$password)
+            'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId'
+        )->setParameter('shopId',$pw)
+            ->setMaxResults($limit)
             ->getResult();
     }
 }
