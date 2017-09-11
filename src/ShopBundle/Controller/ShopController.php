@@ -91,8 +91,8 @@ class ShopController extends FOSRestController
      *                  Filtered by pagesize; possibile to filter by creation- or updating date.",
      *
      *    parameters={
-     *     {"name"="id", "dataType"="integer", "required"="true", "description"="pagenumber"},
-     *     {"name"="password", "dataType"="string", "required"="true", "description"="items per page"}
+     *     {"name"="id", "dataType"="integer", "required"="true", "description"="id of searched shop"},
+     *     {"name"="password", "dataType"="string", "required"="true", "description"="password of searched shop"}
      *     },
      *
      *    filters={

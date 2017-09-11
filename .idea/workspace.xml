@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a0f0f75-4329-48f7-a016-f35616783843" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php" afterPath="$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php" afterPath="$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,39 +17,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ShopController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShopController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="119" column="54" lean-forward="false" selection-start-line="119" selection-start-column="54" selection-end-line="119" selection-end-column="54" />
+            <state relative-caret-position="268">
+              <caret line="94" column="106" lean-forward="false" selection-start-line="94" selection-start-column="106" selection-end-line="94" selection-end-column="106" />
               <folding>
-                <element signature="e#4203#4227#1#PHP" expanded="true" />
+                <element signature="e#4223#4247#1#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop_reviewsRepository.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="14" column="72" lean-forward="true" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
-              <folding>
-                <marker date="1505127552400" expanded="true" signature="401:479" ph="SElECT s.id ShopBundle" />
-                <marker date="1505127552400" expanded="true" signature="401:481" ph="SElECT s.int... ShopBundle" />
-                <marker date="1505127552400" expanded="true" signature="656:716" ph="SELECT r.cre... ShopBundle" />
-                <marker date="1505127552400" expanded="true" signature="656:724" ph="SELECT r.rev... ShopBundle" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shops.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ShopBundle/Entity/Shops.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -89,8 +64,8 @@
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/ShopBundle/Controller/ShopControllerFinal.php" />
         <option value="$PROJECT_DIR$/src/ShopBundle/Entity/Shops.php" />
-        <option value="$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php" />
         <option value="$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php" />
+        <option value="$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php" />
       </list>
     </option>
   </component>
@@ -312,7 +287,8 @@
       <workItem from="1504994718902" duration="966000" />
       <workItem from="1505107583822" duration="7366000" />
       <workItem from="1505122377351" duration="637000" />
-      <workItem from="1505123937380" duration="3601000" />
+      <workItem from="1505123937380" duration="3941000" />
+      <workItem from="1505127927706" duration="763000" />
     </task>
     <task id="LOCAL-00001" summary="better name for ShopController">
       <created>1505113038164</created>
@@ -363,28 +339,35 @@
       <option name="project" value="LOCAL" />
       <updated>1505127509088</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactor: Better name for variables">
+      <created>1505127569880</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1505127569880</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48478000" />
+    <option name="totallyTimeSpent" value="49581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14232409" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14392324" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32975295" sideWeight="0.4978678" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32975295" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2953813" sideWeight="0.50692964" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2953813" sideWeight="0.49520257" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2953813" sideWeight="0.49307036" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32975295" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -406,7 +389,8 @@
     <MESSAGE value="Bugfix: Documentation in English" />
     <MESSAGE value="Update: Added filter-options" />
     <MESSAGE value="Update: Limitation of reviews (depending on pagesize)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: Limitation of reviews (depending on pagesize)" />
+    <MESSAGE value="Refactor: Better name for variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor: Better name for variables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -418,7 +402,7 @@
         <state relative-caret-position="1887">
           <caret line="111" column="5" lean-forward="false" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
           <folding>
-            <element signature="e#4203#4227#1#PHP" expanded="true" />
+            <element signature="e#4223#4247#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -473,7 +457,7 @@
         <state relative-caret-position="289">
           <caret line="29" column="80" lean-forward="false" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
           <folding>
-            <element signature="e#4203#4227#1#PHP" expanded="true" />
+            <element signature="e#4223#4247#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -511,7 +495,7 @@
         <state relative-caret-position="1479">
           <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
-            <element signature="e#4203#4227#1#PHP" expanded="true" />
+            <element signature="e#4223#4247#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -747,6 +731,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <marker date="1505127552400" expanded="true" signature="401:479" ph="SElECT s.id ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="401:481" ph="SElECT s.int... ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="656:716" ph="SELECT r.cre... ShopBundle" />
+            <marker date="1505127552400" expanded="true" signature="656:724" ph="SELECT r.rev... ShopBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ShopBundle/Entity/Shops.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -757,23 +754,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="119" column="54" lean-forward="false" selection-start-line="119" selection-start-column="54" selection-end-line="119" selection-end-column="54" />
+        <state relative-caret-position="268">
+          <caret line="94" column="106" lean-forward="false" selection-start-line="94" selection-start-column="106" selection-end-line="94" selection-end-column="106" />
           <folding>
-            <element signature="e#4203#4227#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="14" column="72" lean-forward="true" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
-          <folding>
-            <marker date="1505127552400" expanded="true" signature="401:479" ph="SElECT s.id ShopBundle" />
-            <marker date="1505127552400" expanded="true" signature="401:481" ph="SElECT s.int... ShopBundle" />
-            <marker date="1505127552400" expanded="true" signature="656:716" ph="SELECT r.cre... ShopBundle" />
-            <marker date="1505127552400" expanded="true" signature="656:724" ph="SELECT r.rev... ShopBundle" />
+            <element signature="e#4223#4247#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
