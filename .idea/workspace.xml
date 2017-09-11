@@ -20,8 +20,8 @@
       <file leaf-file-name="ShopController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state relative-caret-position="387">
+              <caret line="120" column="47" lean-forward="false" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="47" />
               <folding>
                 <element signature="e#4223#4247#1#PHP" expanded="true" />
               </folding>
@@ -288,7 +288,7 @@
       <workItem from="1505107583822" duration="7366000" />
       <workItem from="1505122377351" duration="637000" />
       <workItem from="1505123937380" duration="3941000" />
-      <workItem from="1505127927706" duration="871000" />
+      <workItem from="1505127927706" duration="963000" />
     </task>
     <task id="LOCAL-00001" summary="better name for ShopController">
       <created>1505113038164</created>
@@ -353,11 +353,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505130491773</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactor: method calls summarised to a variable">
+      <created>1505130618728</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1505130618728</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49689000" />
+    <option name="totallyTimeSpent" value="49781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -398,7 +405,8 @@
     <MESSAGE value="Update: Limitation of reviews (depending on pagesize)" />
     <MESSAGE value="Refactor: Better name for variables" />
     <MESSAGE value="Bugfix: edit description fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugfix: edit description fields" />
+    <MESSAGE value="Refactor: method calls summarised to a variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor: method calls summarised to a variable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -762,8 +770,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state relative-caret-position="387">
+          <caret line="120" column="47" lean-forward="false" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="47" />
           <folding>
             <element signature="e#4223#4247#1#PHP" expanded="true" />
           </folding>

@@ -118,7 +118,7 @@ class ShopController extends FOSRestController
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $query, $request->query->getInt('page',1),
-            $request->$limit
+            $request->query->getInt('limit', 3)
         );
         return $pagination;
     }
