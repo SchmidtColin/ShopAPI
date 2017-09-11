@@ -60,7 +60,8 @@ class ShopController extends FOSRestController
     /**
      * @Method ({"GET"})
      * @ApiDoc(
-     *    description="Lists all shops depending on pagesize",
+     *    description="Lists all shops.
+     *                 Filtered by pagesize",
      *    filters={
      *     {"name"="page", "dataType"="integer", "required"="true", "default"="1", "description"="pagenumber"},
      *     {"name"="limit", "dataType"="integer", "required"="true", "default"="3", "description"="items per page"}
@@ -86,9 +87,8 @@ class ShopController extends FOSRestController
     /**
      * @Method ({"GET"})
      * @ApiDoc(
-     *     description="Auslesen aller Reviews zu einem bestimmten Shop
-     * (spezifiziert per shopId + Password, pageable, pagesize als Parameter definierbar,
-     *     Filterbar nach Änderungsdatum()ab/bis), Erstelldatum(ab/bis))",
+     *     description="Lists all reviews of a shop, depending on id and password.
+     *                  Filtered by pagesize; possibile to filter by creation- or updating date.
      *
      *    parameters={
      *     {"name"="id", "dataType"="integer", "required"="true", "description"="pagenumber"},
