@@ -92,15 +92,17 @@ class ShopController extends FOSRestController
      *     description="Lists all reviews of a shop, depending on id and password. Filtered by pagesize; possibile to filter by creation- or updating date.",
      *
      *    requirements={
-     *     {"name"="id", "dataType"="integer", "required"="true", "description"="id of searched shop"},
-     *     {"name"="password", "dataType"="string", "required"="true", "description"="password of searched shop"}
+     *     {"name"="id", "dataType"="integer", "required"="true", "default"="1234", "description"="id of searched shop"},
+     *     {"name"="password", "dataType"="string", "required"="true", "default"="password", "description"="password of searched shop"}
      *     },
      *
      *    filters={
      *     {"name"="first_element", "dataType"="integer", "required"="true", "default"="1", "description"="entry to start with"},
      *     {"name"="items", "dataType"="integer", "required"="true", "default"="3", "description"="number of items to list"},
-     *     {"name"="creation", "dataType"="datetime", "required"="false", "description"="date of creation"},
-     *     {"name"="update", "dataType"="datetime", "required"="false", "description"="date of update "}
+     *     {"name"="creation", "dataType"="datetime", "required"="false", "default"="2017-08-13 13:56:59", "description"="date of creation"},
+     *     {"name"="creation_to (not implemented yet)", "dataType"="datetime", "required"="false", "default"="2017-08-13 13:56:59", "description"="if creation is set, results between those dates will be listed"},
+     *     {"name"="update", "dataType"="datetime", "required"="false", "default"="2017-08-13 13:56:59", "description"="date of last update "},
+     *     {"name"="update_to (not implemented yet)", "dataType"="datetime", "required"="false", "default"="2017-08-13 13:56:59", "description"="if update is set, results between those dates will be listed"},
      *     }
      *
      * )
@@ -126,26 +128,20 @@ class ShopController extends FOSRestController
             return new View('first element must be > 0 ', Response::HTTP_NOT_FOUND);
         if ($items < 1)
             return new View('number of items must be > 0 ', Response::HTTP_NOT_FOUND);
-
         if ($creation !== null and DateTime::createFromFormat('Y-m-d H:i:s', $creation) === FALSE) {
             return new View('creation has no valid date format!', Response::HTTP_NOT_FOUND);
         } else if ($update !== null and DateTime::createFromFormat('Y-m-d H:i:s', $update) === FALSE) {
             return new View('update has no valid date format!', Response::HTTP_NOT_FOUND);
         }
-
-
         $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByShop($id, $password, $firstElement, $items);
         if (empty($query))
-            return new View('There is no shop with such an id or you entered a wrong password!', Response::HTTP_NOT_FOUND);
-
-
+            return new View('Either, there is no shop with that id, or you entered a wrong password!', Response::HTTP_NOT_FOUND);
         if ($creation !== null) {
             $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByCreationDate($id, $password, $firstElement, $items, $creation);
         }
         if ($update !== null) {
             $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByUpdateDate($id, $password, $firstElement, $items, $update);
         }
-
         return $query;
     }
 

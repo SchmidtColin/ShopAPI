@@ -71,17 +71,4 @@ class shop_reviewsRepository extends EntityRepository
         return $this->getByDate($shopId, $password, $firstElement, $items, $update, $sql);
     }
 
-
-
-
-    //634
-    //aHT3mh1X4KEE796RHasZ
-    //2017-08-13 13:56:59
-
-
-//if($creation !== null and $update !== null)
-//{
-//$query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByUpdateDate($id, $password, $firstElement, $items, $creation, $update);
-//}
-
 }
