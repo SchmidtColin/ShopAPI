@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a0f0f75-4329-48f7-a016-f35616783843" name="Default" comment="">
+    <list default="true" id="6a0f0f75-4329-48f7-a016-f35616783843" name="Default" comment="Debug: Controller wrong &quot;use&quot;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php" afterPath="$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShopBundle/Entity/Shops.php" afterPath="$PROJECT_DIR$/src/ShopBundle/Entity/Shops.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShopBundle/Repository/shopRepository.php" afterPath="$PROJECT_DIR$/src/ShopBundle/Repository/shopRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php" afterPath="$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,58 +20,12 @@
       <file leaf-file-name="ShopController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state relative-caret-position="-1649">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <element signature="e#121#140#0#PHP" expanded="true" />
-                <element signature="e#2700#2718#1#PHP" expanded="true" />
-                <element signature="e#4789#4813#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shops.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ShopBundle/Entity/Shops.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShopReviews.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ShopBundle/Entity/ShopReviews.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="26" column="77" lean-forward="false" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop_reviewsRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <marker date="1505371327260" expanded="true" signature="412:490" ph="SElECT s.id ShopBundle" />
-                <marker date="1505371327260" expanded="true" signature="412:492" ph="SElECT s.int... ShopBundle" />
-                <marker date="1505371327260" expanded="true" signature="675:743" ph="SELECT r.rev... ShopBundle" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shopRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ShopBundle/Repository/shopRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="35" />
-              <folding>
-                <marker date="1505368252436" expanded="true" signature="391:423" ph="SELECT s FRO... ShopBundle" />
+                <element signature="e#121#134#0#PHP" expanded="true" />
+                <element signature="e#2631#2649#1#PHP" expanded="true" />
+                <element signature="e#4720#4744#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -339,7 +290,7 @@
       <workItem from="1505122377351" duration="637000" />
       <workItem from="1505123937380" duration="3941000" />
       <workItem from="1505127927706" duration="963000" />
-      <workItem from="1505299996477" duration="14104000" />
+      <workItem from="1505299996477" duration="14293000" />
     </task>
     <task id="LOCAL-00001" summary="better name for ShopController">
       <created>1505113038164</created>
@@ -411,11 +362,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505130618728</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update: Validation-Logic, Repo-Logic">
+      <created>1505381778931</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1505381778931</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65376000" />
+    <option name="totallyTimeSpent" value="65565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -423,16 +381,16 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14552239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32975295" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2953813" sideWeight="0.50692964" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2953813" sideWeight="0.49307036" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2953813" sideWeight="0.49307036" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32975295" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -457,7 +415,9 @@
     <MESSAGE value="Refactor: Better name for variables" />
     <MESSAGE value="Bugfix: edit description fields" />
     <MESSAGE value="Refactor: method calls summarised to a variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor: method calls summarised to a variable" />
+    <MESSAGE value="Update: Validation-Logic, Repo-Logic" />
+    <MESSAGE value="Debug: Controller wrong &quot;use&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug: Controller wrong &quot;use&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -511,9 +471,9 @@
         <state relative-caret-position="289">
           <caret line="29" column="80" lean-forward="false" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
           <folding>
-            <element signature="e#121#140#0#PHP" expanded="true" />
-            <element signature="e#2700#2718#1#PHP" expanded="true" />
-            <element signature="e#4789#4813#1#PHP" expanded="true" />
+            <element signature="e#121#134#0#PHP" expanded="true" />
+            <element signature="e#2631#2649#1#PHP" expanded="true" />
+            <element signature="e#4720#4744#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -546,9 +506,9 @@
         <state relative-caret-position="1479">
           <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
-            <element signature="e#121#140#0#PHP" expanded="true" />
-            <element signature="e#2700#2718#1#PHP" expanded="true" />
-            <element signature="e#4789#4813#1#PHP" expanded="true" />
+            <element signature="e#121#134#0#PHP" expanded="true" />
+            <element signature="e#2631#2649#1#PHP" expanded="true" />
+            <element signature="e#4720#4744#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -759,10 +719,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ShopBundle/Entity/Shops.php">
+    <entry file="file://$PROJECT_DIR$/src/ShopBundle/Validation/ShopReviewsValidation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        <state relative-caret-position="523">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -777,18 +737,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ShopBundle/Entity/ShopReviews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="26" column="77" lean-forward="false" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ShopBundle/Repository/shop_reviewsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="387">
+          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding>
             <marker date="1505371327260" expanded="true" signature="412:490" ph="SElECT s.id ShopBundle" />
             <marker date="1505371327260" expanded="true" signature="412:492" ph="SElECT s.int... ShopBundle" />
@@ -797,22 +749,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ShopBundle/Validation/ShopReviewsValidation.php">
+    <entry file="file://$PROJECT_DIR$/src/ShopBundle/Entity/ShopReviews.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="-272">
+          <caret line="26" column="77" lean-forward="false" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ShopBundle/Entity/Shops.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ShopBundle/Controller/ShopController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state relative-caret-position="-1649">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#121#140#0#PHP" expanded="true" />
-            <element signature="e#2700#2718#1#PHP" expanded="true" />
-            <element signature="e#4789#4813#1#PHP" expanded="true" />
+            <element signature="e#121#134#0#PHP" expanded="true" />
+            <element signature="e#2631#2649#1#PHP" expanded="true" />
+            <element signature="e#4720#4744#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

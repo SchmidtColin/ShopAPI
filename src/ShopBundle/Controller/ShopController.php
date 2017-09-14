@@ -9,7 +9,6 @@
 namespace ShopBundle\Controller;
 
 
-use function count;
 use DateTime;
 use FOS\RestBundle\Controller\Annotations\Route;
 use FOS\RestBundle\Controller\FOSRestController;
@@ -18,7 +17,6 @@ use function is_numeric;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use ShopBundle\Entity\Shops;
-use ShopBundle\Validation\ShopReviewsValidation;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
