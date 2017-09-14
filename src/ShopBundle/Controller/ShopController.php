@@ -63,7 +63,7 @@ class ShopController extends FOSRestController
      *     section="shop",
      *    description="Lists all shops. Filtered by pagesize",
      *    filters={
-     *     {"name"="firstElement", "dataType"="integer", "required"="true", "default"="1", "description"="entry to start with"},
+     *     {"name"="firstElement", "dataType"="integer", "required"="true", "default"="1", "description"="item to start with"},
      *     {"name"="items", "dataType"="integer", "required"="true", "default"="3", "description"="number of items to list"}
      *     }
      *
@@ -89,7 +89,7 @@ class ShopController extends FOSRestController
      * @Method ({"GET"})
      * @ApiDoc(
      *     section="review",
-     *     description="Lists all reviews of a shop, depending on id and password. Filtered by pagesize; possibile to filter by creation- or updating date.",
+     *     description="Lists all reviews of a shop, depending on id and password. Filtered by pagesize; possible to filter by creation- or updating date.",
      *
      *    requirements={
      *     {"name"="id", "dataType"="integer", "required"="true", "default"="1234", "description"="id of searched shop"},
