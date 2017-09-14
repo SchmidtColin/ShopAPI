@@ -8,7 +8,6 @@
 
 namespace ShopBundle\Controller;
 
-
 use DateTime;
 use FOS\RestBundle\Controller\Annotations\Route;
 use FOS\RestBundle\Controller\FOSRestController;
@@ -62,8 +61,7 @@ class ShopController extends FOSRestController
      * @Method ({"GET"})
      * @ApiDoc(
      *     section="shop",
-     *    description="Lists all shops.
-     *                 Filtered by pagesize",
+     *    description="Lists all shops. Filtered by pagesize",
      *    filters={
      *     {"name"="firstElement", "dataType"="integer", "required"="true", "default"="1", "description"="entry to start with"},
      *     {"name"="items", "dataType"="integer", "required"="true", "default"="3", "description"="number of items to list"}
@@ -91,8 +89,7 @@ class ShopController extends FOSRestController
      * @Method ({"GET"})
      * @ApiDoc(
      *     section="review",
-     *     description="Lists all reviews of a shop, depending on id and password.
-     *                  Filtered by pagesize; possibile to filter by creation- or updating date.",
+     *     description="Lists all reviews of a shop, depending on id and password. Filtered by pagesize; possibile to filter by creation- or updating date.",
      *
      *    requirements={
      *     {"name"="id", "dataType"="integer", "required"="true", "description"="id of searched shop"},
@@ -102,8 +99,8 @@ class ShopController extends FOSRestController
      *    filters={
      *     {"name"="first_element", "dataType"="integer", "required"="true", "default"="1", "description"="entry to start with"},
      *     {"name"="items", "dataType"="integer", "required"="true", "default"="3", "description"="number of items to list"},
-     *     {"name"="creation (not implemented yet)", "dataType"="datetime", "required"="false", "description"="date of creation"},
-     *     {"name"="update (not implemented yet)", "dataType"="datetime", "required"="false", "description"="date of update "}
+     *     {"name"="creation", "dataType"="datetime", "required"="false", "description"="date of creation"},
+     *     {"name"="update", "dataType"="datetime", "required"="false", "description"="date of update "}
      *     }
      *
      * )
@@ -117,6 +114,8 @@ class ShopController extends FOSRestController
         $password = $request->query->get('password');
         $firstElement = $request->query->get('first_element');
         $items = $request->query->get('items');
+        $creation = $request->query->get('creation');
+        $update = $request->query->get('update');
 
 
         if (!is_numeric($id) or $id === null)
@@ -128,9 +127,24 @@ class ShopController extends FOSRestController
         if ($items < 1)
             return new View('number of items must be > 0 ', Response::HTTP_NOT_FOUND);
 
+        if ($creation !== null and DateTime::createFromFormat('Y-m-d H:i:s', $creation) === FALSE) {
+            return new View('creation has no valid date format!', Response::HTTP_NOT_FOUND);
+        } else if ($update !== null and DateTime::createFromFormat('Y-m-d H:i:s', $update) === FALSE) {
+            return new View('update has no valid date format!', Response::HTTP_NOT_FOUND);
+        }
+
+
         $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByShop($id, $password, $firstElement, $items);
         if (empty($query))
             return new View('There is no shop with such an id or you entered a wrong password!', Response::HTTP_NOT_FOUND);
+
+
+        if ($creation !== null) {
+            $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByCreationDate($id, $password, $firstElement, $items, $creation);
+        }
+        if ($update !== null) {
+            $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByUpdateDate($id, $password, $firstElement, $items, $update);
+        }
 
         return $query;
     }

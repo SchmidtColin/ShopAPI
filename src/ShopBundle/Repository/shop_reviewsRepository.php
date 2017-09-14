@@ -12,12 +12,18 @@ use Doctrine\ORM\EntityRepository;
  */
 class shop_reviewsRepository extends EntityRepository
 {
-    public function getByShop(int $shopId, string $password, $firstElement, $items)
+
+    public function getShop(int $shopId, string $password)
     {
-        $id = $this->getEntityManager()->createQuery('SElECT s.id from ShopBundle:Shops s WHERE s.id=:id AND s.interfacePassword=:pw')
+        return $this->getEntityManager()->createQuery('SElECT s.id from ShopBundle:Shops s WHERE s.id=:id AND s.interfacePassword=:pw')
             ->setParameter('id', $shopId)
             ->setParameter('pw', $password)
             ->getResult();
+    }
+
+    public function getByShop(int $shopId, string $password, $firstElement, $items)
+    {
+        $id = $this->getShop($shopId, $password);
 
         return $this->getEntityManager()->createQuery(
             'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId'
@@ -26,5 +32,56 @@ class shop_reviewsRepository extends EntityRepository
             ->setMaxResults($items)
             ->getResult();
     }
+
+    public function getByCreationAndUdateDate($shopId, $password, $firstElement, $items, $creation, $update)
+    {
+        $id = $this->getShop($shopId, $password);
+
+        return $this->getEntityManager()->createQuery(
+            'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.createdAt :createdat AND r.updatedAt :updatedat '
+        )->setParameter('shopId', $id)
+            ->setParameter('createdat', $creation)
+            ->setParameter('updatesdat', $update)
+            ->setFirstResult($firstElement-1)
+            ->setMaxResults($items)
+            ->getResult();
+    }
+
+    public function getByDate($shopId, $password, $firstElement, $items, $dateinput, $query)
+    {
+        $id = $this->getShop($shopId, $password);
+        return $this->getEntityManager()->createQuery(
+            ''.$query
+        )->setParameter('shopId', $id)
+            ->setParameter('dateinput', $dateinput)
+            ->setFirstResult($firstElement-1)
+            ->setMaxResults($items)
+            ->getResult();
+    }
+
+    public function getByCreationDate($shopId, $password, $firstElement, $items, $creation)
+    {
+        $sql = 'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.createdAt=:dateinput';
+        return $this->getByDate($shopId, $password, $firstElement, $items, $creation, $sql);
+    }
+
+    public function getByUpdateDate($shopId, $password, $firstElement, $items, $update)
+    {
+        $sql = 'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.updatedAt=:dateinput';
+        return $this->getByDate($shopId, $password, $firstElement, $items, $update, $sql);
+    }
+
+
+
+
+    //634
+    //aHT3mh1X4KEE796RHasZ
+    //2017-08-13 13:56:59
+
+
+//if($creation !== null and $update !== null)
+//{
+//$query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByUpdateDate($id, $password, $firstElement, $items, $creation, $update);
+//}
 
 }
