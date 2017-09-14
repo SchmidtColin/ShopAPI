@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Shops
  *
  * @ORM\Table(name="shops")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ShopBundle\Repository\shopRepository")
  */
 class Shops
 {
@@ -17,7 +17,6 @@ class Shops
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="UUID")
      */
     private $id;
 
@@ -55,6 +54,13 @@ class Shops
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param integer $id
+     */
+    public function setId($id){
+        $this->id = $id;
     }
 
     /**

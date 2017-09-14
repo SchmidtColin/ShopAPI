@@ -12,5 +12,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class shopRepository extends EntityRepository
 {
+    public function getByBorders(int $firstElement, int $items)
+    {
+
+        return $this->getEntityManager()->createQuery(
+            'SELECT s FROM ShopBundle:Shops s'
+        )
+            ->setFirstResult($firstElement-1)
+            ->setMaxResults($items)
+            ->getResult();
+    }
 
 }

@@ -9,28 +9,31 @@
 namespace ShopBundle\Controller;
 
 
-
+use function count;
+use DateTime;
 use FOS\RestBundle\Controller\Annotations\Route;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\View\View;
+use function is_numeric;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use ShopBundle\Entity\Shops;
+use ShopBundle\Validation\ShopReviewsValidation;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class ShopController extends FOSRestController
 {
 
+
     /**
      * @Method ({"POST"})
      * @ApiDoc(
+     *     section="shop",
      *    description="Creating a shop",
      *      parameters={
-     *          {"name"="interfacePassword", "dataType"="string", "required"="", "description"="password"},
-     *          {"name"="lastSync", "dataType"="datetime", "required"="", "description"="last synchronisation"},
-     *          {"name"="lastSyncResponseCode", "dataType"="integer", "required"="", "description"="last response code"},
-     *          {"name"="lastProcessed", "dataType"="datetime", "required"="", "description"="last processed"}
+     *          {"name"="id", "dataType"="integer", "required"="true", "description"="shop id"},
+     *          {"name"="interfacePassword", "dataType"="string", "required"="true", "description"="password"}
      *      }
      *     )
      * @Route("/shop")
@@ -39,16 +42,16 @@ class ShopController extends FOSRestController
      */
     public function postShop(Request $request)
     {
-        $shop = new Shops();
-        $interfacePassword = $request->get('interfacePassword');
-        $lastSync = $request->get('lastSync');
-        $lastSyncResponseCode = $request->get('lastSyncResponseCode');
-        $lastProcessed = $request->get('lastProcessed');
 
+        $shop = new Shops();
+        $id = $request->get('id');
+        $interfacePassword = $request->get('interfacePassword');
+
+        $shop->setId($id);
         $shop->setInterfacePassword($interfacePassword);
-        $shop->setLastSync($lastSync);
-        $shop->setLastSyncResponseCode($lastSyncResponseCode);
-        $shop->setLastProcessed($lastProcessed);
+        $shop->setLastSync(new DateTime());
+        $shop->setLastSyncResponseCode(Response::HTTP_OK);
+        $shop->setLastProcessed(new DateTime());
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($shop);
@@ -60,69 +63,79 @@ class ShopController extends FOSRestController
     /**
      * @Method ({"GET"})
      * @ApiDoc(
+     *     section="shop",
      *    description="Lists all shops.
      *                 Filtered by pagesize",
      *    filters={
-     *     {"name"="page", "dataType"="integer", "required"="true", "default"="1", "description"="pagenumber"},
-     *     {"name"="limit", "dataType"="integer", "required"="true", "default"="3", "description"="items per page"}
+     *     {"name"="firstElement", "dataType"="integer", "required"="true", "default"="1", "description"="entry to start with"},
+     *     {"name"="items", "dataType"="integer", "required"="true", "default"="3", "description"="number of items to list"}
      *     }
      *
      * )
-     * @Route("/shop/")
+     * @Route("/shop")
      * @param Request $request
      * @return View|object|Shops
      */
     public function getShop(Request $request)
     {
-        $query = $this->getDoctrine()->getRepository('ShopBundle:Shops')->findAll();
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $query, $request->query->getInt('page',1),
-            $request->query->getInt('limit', 3)
-        );
+        $firstElement = $request->query->get('firstElement');
+        $items = $request->query->get('items');
 
-        return $pagination;
+        if ($firstElement < 1)
+            return new View('first element must be > 0 ', Response::HTTP_NOT_FOUND);
+        if ($items < 0)
+            return new View('number of items must be >= 0 ', Response::HTTP_NOT_FOUND);
+        $query = $this->getDoctrine()->getRepository('ShopBundle:Shops')->getByBorders($firstElement, $items);
+        return $query;
     }
 
     /**
      * @Method ({"GET"})
      * @ApiDoc(
+     *     section="review",
      *     description="Lists all reviews of a shop, depending on id and password.
      *                  Filtered by pagesize; possibile to filter by creation- or updating date.",
      *
-     *    parameters={
+     *    requirements={
      *     {"name"="id", "dataType"="integer", "required"="true", "description"="id of searched shop"},
      *     {"name"="password", "dataType"="string", "required"="true", "description"="password of searched shop"}
      *     },
      *
      *    filters={
-     *     {"name"="page", "dataType"="integer", "required"="true", "default"="1", "description"="pagenumber"},
-     *     {"name"="limit", "dataType"="integer", "required"="true", "default"="3", "description"="items per page"},
+     *     {"name"="first_element", "dataType"="integer", "required"="true", "default"="1", "description"="entry to start with"},
+     *     {"name"="items", "dataType"="integer", "required"="true", "default"="3", "description"="number of items to list"},
      *     {"name"="creation (not implemented yet)", "dataType"="datetime", "required"="false", "description"="date of creation"},
      *     {"name"="update (not implemented yet)", "dataType"="datetime", "required"="false", "description"="date of update "}
      *     }
      *
      * )
-     * @Route("/shopReview/")
+     * @Route("/shop/{id}/reviews")
      * @param Request $request
+     * @param int $id
      * @return View|object|\ShopBundle\Entity\ShopReviews
      */
-    public function getReview(Request $request)
+    public function getReview(Request $request, $id)
     {
+        $password = $request->query->get('password');
+        $firstElement = $request->query->get('first_element');
+        $items = $request->query->get('items');
 
-        $id=$request->query->get('id');
-        $password=$request->query->get('password');
-        $limit=$request->query->getInt('limit', 3);
 
-        $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByShop($id, $password, $limit);
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $query, $request->query->getInt('page',1),
-            $request->query->getInt('limit', 3)
-        );
-        return $pagination;
+        if (!is_numeric($id) or $id === null)
+            return new View('Pleas enter id as a number!', Response::HTTP_NOT_FOUND);
+        if ($password === null)
+            return new View('Pleas enter a password', Response::HTTP_NOT_FOUND);
+        if ($firstElement < 1)
+            return new View('first element must be > 0 ', Response::HTTP_NOT_FOUND);
+        if ($items < 1)
+            return new View('number of items must be > 0 ', Response::HTTP_NOT_FOUND);
+
+        $query = $this->getDoctrine()->getRepository('ShopBundle:ShopReviews')->getByShop($id, $password, $firstElement, $items);
+        if (empty($query))
+            return new View('There is no shop with such an id or you entered a wrong password!', Response::HTTP_NOT_FOUND);
+
+        return $query;
     }
-
 
 
 }
