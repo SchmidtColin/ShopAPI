@@ -42,8 +42,8 @@ class shop_reviewsRepository extends EntityRepository
         )->setParameter('shopId', $id)
             ->setParameter('createdat', $creation)
             ->setParameter('createdto', $creationTo)
-            ->setParameter('updatedto', $update)
-            ->setParameter('updatedat', $updateTo)
+            ->setParameter('updatedat', $update)
+            ->setParameter('updatedto', $updateTo)
             ->setFirstResult($firstElement-1)
             ->setMaxResults($items)
             ->getResult();
