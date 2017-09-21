@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityRepository;
 class shop_reviewsRepository extends EntityRepository
 {
 
-    public function getShop(int $shopId, string $password)
+    private function getShop(int $shopId, string $password)
     {
         return $this->getEntityManager()->createQuery('SElECT s.id from ShopBundle:Shops s WHERE s.id=:id AND s.interfacePassword=:pw')
             ->setParameter('id', $shopId)
@@ -33,42 +33,48 @@ class shop_reviewsRepository extends EntityRepository
             ->getResult();
     }
 
-    public function getByCreationAndUdateDate($shopId, $password, $firstElement, $items, $creation, $update)
+    public function getByCreationAndUpdateDate($shopId, $password, $firstElement, $items, $creation, $creationTo, $update, $updateTo)
     {
         $id = $this->getShop($shopId, $password);
 
         return $this->getEntityManager()->createQuery(
-            'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.createdAt :createdat AND r.updatedAt :updatedat '
+            'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.createdAt BETWEEN :createdat AND :createdto  AND r.updatedAt BETWEEN :updatedat AND :updatedto  '
         )->setParameter('shopId', $id)
             ->setParameter('createdat', $creation)
-            ->setParameter('updatesdat', $update)
+            ->setParameter('createdto', $creationTo)
+            ->setParameter('updatedto', $update)
+            ->setParameter('updatedat', $updateTo)
             ->setFirstResult($firstElement-1)
             ->setMaxResults($items)
             ->getResult();
     }
 
-    public function getByDate($shopId, $password, $firstElement, $items, $dateinput, $query)
+    public function getByCreationBetween($shopId, $password, $firstElement, $items, $creation, $creationTo)
     {
         $id = $this->getShop($shopId, $password);
+
         return $this->getEntityManager()->createQuery(
-            ''.$query
+            'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.createdAt BETWEEN :createdat AND :createdto '
         )->setParameter('shopId', $id)
-            ->setParameter('dateinput', $dateinput)
+            ->setParameter('createdat', $creation)
+            ->setParameter('createdto', $creationTo)
             ->setFirstResult($firstElement-1)
             ->setMaxResults($items)
             ->getResult();
     }
 
-    public function getByCreationDate($shopId, $password, $firstElement, $items, $creation)
+    public function getByUpdateBetween($shopId, $password, $firstElement, $items, $update, $updateTo)
     {
-        $sql = 'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.createdAt=:dateinput';
-        return $this->getByDate($shopId, $password, $firstElement, $items, $creation, $sql);
-    }
+        $id = $this->getShop($shopId, $password);
 
-    public function getByUpdateDate($shopId, $password, $firstElement, $items, $update)
-    {
-        $sql = 'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.updatedAt=:dateinput';
-        return $this->getByDate($shopId, $password, $firstElement, $items, $update, $sql);
+        return $this->getEntityManager()->createQuery(
+            'SELECT r.review FROM ShopBundle:ShopReviews r WHERE r.fkShop=:shopId AND r.updatedAt BETWEEN :updatedat AND :updatedto '
+        )->setParameter('shopId', $id)
+            ->setParameter('updatedat', $update)
+            ->setParameter('updatedto', $updateTo)
+            ->setFirstResult($firstElement-1)
+            ->setMaxResults($items)
+            ->getResult();
     }
 
 }
